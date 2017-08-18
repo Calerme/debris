@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生 JS 实现点击选中</title>
+</head>
+<body>
+    <input type="text" value="Hello World!">
+
+<script>
+    const oInput = document.querySelector('input');
+    
+    if (document.body.createTextRange) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(oInput);
+        range.select();
+    } else if (window.getSelection){
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(oInput);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    } else {
+        alert('none');
+    }
+</script>
+</body>
+</html>

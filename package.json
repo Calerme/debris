@@ -1,0 +1,29 @@
+{
+  "name": "debris",
+  "version": "0.0.1",
+  "description": "This is a storeroom.",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Calerme/debris.git"
+  },
+  "keywords": [
+    "notes",
+    "javascript",
+    "html",
+    "css",
+    "web"
+  ],
+  "author": "Caler",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Calerme/debris/issues"
+  },
+  "homepage": "https://github.com/Calerme/debris",
+  "devDependencies": {
+    "eslint": "^4.5.0"
+  }
+}

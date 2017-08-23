@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POSITION 加 MARGIN 实现居中</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+        #wrapper {
+            position: relative;
+            height: 100%;
+        }
+        #sub {
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="sub"></div>
+    </div>
+</body>
+</html>

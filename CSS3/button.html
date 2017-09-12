@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            padding: .3em .8em;
+            border: 1px solid rgba(0,0,0,.1);
+            background: #58a linear-gradient(hsla(0,0%,100%,.2), transparent);
+            border-radius: .2em;
+            box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+            color: white;
+            text-shadow: 0 -.05em .25em rgba(0,0,0,.5);
+            font-size: 125%;
+            line-height: 1.5;
+            outline: none;
+        }
+        button.ok {
+            background-color: #6b0;
+        }
+        button.cancel {
+            background-color: #c00;
+        }
+    </style>
+</head>
+<body>
+<button class="js-bigger">+</button>
+<button class="js-smaller">-</button>
+
+<button>YES!</button>
+
+<button class="ok">OK</button>
+
+<button class="cancel">Cancel</button>
+
+<script>
+    let biggerBtn = document.querySelector('.js-bigger');
+    let smallerBtn = document.querySelector('.js-smaller');
+
+    function setRootFontSize(divisor) {
+        let root = document.documentElement;
+        let num = parseInt(getComputedStyle(root).fontSize);
+
+        num += divisor;
+
+        root.style.fontSize = num + 'px';
+    }
+
+    biggerBtn.addEventListener('click', function () {
+        setRootFontSize(2);
+    });
+    smallerBtn.addEventListener('click', function () {
+        setRootFontSize(-2);
+    });
+</script>
+</body>
+</html>

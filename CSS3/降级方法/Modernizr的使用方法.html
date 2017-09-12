@@ -1,0 +1,53 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]>
+<html class="no-js">
+<![endif]-->
+<html lang="zh" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modernizr</title>
+    <style>
+        ul {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        li:nth-of-type(odd) {
+            background-color: lightgray;
+        }
+        .rgba li:nth-of-type(odd) {
+            background-color: rgba(0,255,255,.5);
+        }
+
+    </style>
+    <script src="https://cdn.bootcss.com/modernizr/2010.07.06dev/modernizr.min.js"></script>
+    <script>
+        window.onload = function () {
+            var oHtml = document.documentElement;
+            var classList = oHtml.classList;
+            var s = '<ul>';
+            for (var i of classList) {
+                s += '<li>' + i + '</li>';
+            }
+            s += '</ul>';
+            document.body.innerHTML = s;
+        }
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

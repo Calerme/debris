@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提示框写法</title>
+    <style>
+        .callout {
+            position: relative;
+            max-width: 16em;
+            padding: .5em;
+            margin-top: 2px;
+            background-color: antiquewhite;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .5em;
+        }
+        .callout:before {
+            content: '';
+            position: absolute;
+            top: -.3em;
+            left: 1em;
+            width: .5em;
+            height: .5em;
+            transform: rotate(45deg);
+            border: inherit;
+            border-right: none;
+            border-bottom: none;
+            background: inherit;
+        }
+    </style>
+</head>
+<body>
+<label for="un">Your username:</label><br>
+<input type="text" id="un"><br>
+<div class="callout">
+    Only letters, numbers, underscores(_) and hyphens (-) allowed!
+</div>
+</body>
+</html>

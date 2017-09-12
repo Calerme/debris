@@ -1,0 +1,10 @@
+/* currentColor 是 CSS 有史以来的第一个变量
+ * 它的值被解析为 color
+ * border-color outline-color
+ * text-shadow box-shadow 的颜色值默认都是 currentColor
+ */
+
+hr {
+    height: .5em;
+    background: currentColor;
+}

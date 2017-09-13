@@ -1,0 +1,3 @@
+ul { --accent-color: purple; }
+ol { --accent-color: rebeccapurple; }
+li { background: var(--accent-color); }

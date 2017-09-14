@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>透明边框</title>
+    <style>
+        html, body { height: 100% }
+        body {
+            margin: 0;
+            background: url(../../demo.jpg) no-repeat 0 / cover;
+        }
+        div {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            box-sizing: border-box;
+            width: 50%;
+            height: 40%;
+            padding: 2rem 5rem;
+            margin: auto;
+            border: 2rem solid hsla(0,0%,100%,.3);
+            font-size: 3rem;
+            text-align: left;
+            background-color: hsl(0,0%,100%);
+            background-clip: padding-box; /* 便背景不延伸到 border 正文 */
+        }
+    </style>
+</head>
+<body>
+<div>Can I has semi-transparent borders? Pretty please?</div>
+</body>
+</html>

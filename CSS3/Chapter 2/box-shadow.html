@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-shadow模拟多重边框</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            margin: auto;
+            background: yellowgreen;
+            box-shadow: 0 0 0 10px #655,
+                        0 0 0 15px deeppink,
+                        0 2px 5px 15px rgba(0,0,0,.6);
+        }
+    </style>
+</head>
+<body>
+<p>box-shadow 的第四个数值参数表示“扩张半径”，通过指定正值或负值，可以让投影面积加大或减小。</p>
+<p>当 box-shadow 的偏移量及模糊值为 0 时，加上正值的“扩张半径”，其实就是一道实线边框。</p>
+<p>用投影模拟多重边框时，要注意投影与边框的不同：
+    <ul>
+        <li>
+            <dl>
+                <dt>投影不影响布局，也不会受到 box-sizing 属性的影响</dt>
+                <dd>解决方法：通过内边距或外边距来额外模拟边框所需要占据的空间。</dd>
+            </dl>
+        </li>
+    </ul>
+</p>
+<div></div>
+</body>
+</html>

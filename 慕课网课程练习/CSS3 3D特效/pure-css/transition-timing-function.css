@@ -1,0 +1,46 @@
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.fn {
+    margin-bottom: 5px;
+}
+
+.block {
+    width: 5%;
+    height: 40px;
+    background-color: dodgerblue;
+    border-radius: 4px;
+    transition: width 3s;
+}
+
+.wrapper:hover .fn {
+    color: white;
+    text-shadow: 0 0 5px #000;
+}
+
+.wrapper:hover .block {
+    width: 100%;
+}
+
+[data-fn=ease] {
+    transition-timing-function: ease;
+}
+
+[data-fn=ease-in] {
+    transition-timing-function: ease-in;
+}
+
+[data-fn=ease-out] {
+    transition-timing-function: ease-out;
+}
+
+[data-fn=ease-in-out] {
+    transition-timing-function: ease-in-out;
+}
+
+[data-fn=linear] {
+    transition-timing-function: linear;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Retina 1px border 模糊</title>
+    <style>
+        p {
+            position: relative;
+            width: 300px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: deepskyblue;
+            color: white;
+        }
+        p:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid #000;
+            transform: scaleY(0.5);
+        }
+    </style>
+</head>
+<body>
+<p>
+    Retina 屏幕下的 1px border 会用 2 个物理像素去渲染，所以效果不好，会产生模糊。<br>
+    一种解决办法就是使用伪元素设置 1 px 的边框，并使用使用 transform 缩小 0.5 倍，达到使用 1 物理像素渲染的效果。
+</p>
+</body>
+</html>

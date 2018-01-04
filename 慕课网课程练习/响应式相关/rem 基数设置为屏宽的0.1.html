@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html font-size 设置为屏屏宽的 0.1 实现响应式</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+        @media only screen and (max-device-width: 375px) {
+          html {
+              font-size: 37.5px;
+          }
+        }
+        @media only screen and (max-device-width: 625px) {
+            html {
+                font-size: 62.5px;
+            }
+        }
+    </style>
+</head>
+<body>
+这样就可以根据设置的大小页面中根据 rem 设置的大小适应设备的大小。
+</body>
+</html>
